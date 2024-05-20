@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.example.bootcampmay.R
 
-fun fragmentAdd(activity: FragmentActivity, fragment: Fragment, bundle: Bundle? = null ) {
+fun fragmentAdd(activity: FragmentActivity?, fragment: Fragment, bundle: Bundle? = null ) {
 
     fragment.arguments = bundle
 

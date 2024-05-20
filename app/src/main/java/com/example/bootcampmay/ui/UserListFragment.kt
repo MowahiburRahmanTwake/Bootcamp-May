@@ -6,27 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.bootcampmay.databinding.FragmentHomeBinding
-import com.example.bootcampmay.utils.fragmentAdd
+import com.example.bootcampmay.databinding.FragmentUserListBinding
 
-class HomeFragment: Fragment() {
-    private lateinit var binding: FragmentHomeBinding
+class UserListFragment: Fragment() {
+    private lateinit var binding: FragmentUserListBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = FragmentHomeBinding.inflate(inflater,container,false)
+        binding = FragmentUserListBinding.inflate(inflater,container,false)
         return binding.root
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.btnEnter.setOnClickListener {
-
-            val bundle = Bundle().apply {
-//                putParcelable()
-            }
-
-            fragmentAdd(activity, UserListFragment(),bundle)
-        }
     }
 }
