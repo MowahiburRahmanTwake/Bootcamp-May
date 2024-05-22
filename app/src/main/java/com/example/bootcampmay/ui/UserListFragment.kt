@@ -8,16 +8,20 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bootcampmay.adapter.UserAdapter
-import com.example.bootcampmay.databinding.FragmentHomeBinding
 import com.example.bootcampmay.databinding.FragmentUserListBinding
 import com.example.bootcampmay.model.UserModel
 import com.example.bootcampmay.utils.fragmentAdd
+import com.google.firebase.Firebase
+import com.google.firebase.firestore.*
 
 class UserListFragment: Fragment() {
+
     private lateinit var binding: FragmentUserListBinding
 
     private val users = arrayListOf<UserModel>()
     private var userAdapter: UserAdapter? = null
+
+    private val db = Firebase.firestore
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentUserListBinding.inflate(inflater,container,false)
@@ -39,8 +43,30 @@ class UserListFragment: Fragment() {
         fragmentAdd(activity, ConversationFragment(),bundle)
         }
 
+        setUserToFirestore()
+        //loadData()
+    }
 
-        loadData()
+    private fun setUserToFirestore(){
+        // Create a new user with a first and last name
+        val user = UserModel(
+            "123",
+            "Twake",
+            "https/...",
+            "Hi hello",
+        )
+
+// Add a new document with a generated ID
+        db.collection("users")
+            .add(user)
+            .addOnSuccessListener { documentReference ->
+//                Log.d(TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+            }
+            .addOnFailureListener { e ->
+//                Log.w(TAG, "Error adding document", e)
+            }
+        
+
     }
     private fun loadData(){
 
