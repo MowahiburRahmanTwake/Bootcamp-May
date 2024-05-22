@@ -26,7 +26,7 @@ class HomeFragment: Fragment() {
 //                putParcelable()
             }
 
-            fragmentAdd(activity, UserListFragment(),bundle)
+            fragmentAdd( activity, UserListFragment(),bundle)
         }
     }
 }

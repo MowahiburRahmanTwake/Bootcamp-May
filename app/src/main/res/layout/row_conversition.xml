@@ -15,11 +15,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/tvUserName"
+        android:id="@+id/tvUserMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="17sp"
-        app:layout_constraintEnd_toStartOf="@+id/ivUserme"
+        app:layout_constraintEnd_toStartOf="@+id/ivUserMe"
         app:layout_constraintStart_toEndOf="@+id/ivUser"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Twake Apps Learn" />
@@ -27,14 +27,16 @@
     <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="0dp"
         android:id="@+id/ivMessageImage"
+        android:visibility="gone"
+        tools:visibility="visible"
         android:layout_height="180dp"
         android:layout_marginTop="5dp"
         android:scaleType="fitStart"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvUserName"
+        app:layout_constraintEnd_toEndOf="@+id/tvUserMessage"
         app:layout_constraintStart_toEndOf="@+id/ivUser"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvUserMessage" />
 
 
     <com.google.android.material.textview.MaterialTextView
@@ -42,7 +44,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textSize="10sp"
-        app:layout_constraintEnd_toStartOf="@+id/ivUserme"
+        app:layout_constraintEnd_toStartOf="@+id/ivUserMe"
         app:layout_constraintStart_toEndOf="@+id/ivUser"
         app:layout_constraintTop_toBottomOf="@+id/ivMessageImage"
         tools:text="00:00:00" />
@@ -50,7 +52,7 @@
 
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/ivUserme"
+        android:id="@+id/ivUserMe"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@drawable/ic_launcher_background"

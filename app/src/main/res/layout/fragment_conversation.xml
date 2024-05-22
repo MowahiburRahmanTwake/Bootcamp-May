@@ -20,13 +20,54 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMain"
         android:layout_width="match_parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:listitem="@layout/row_conversition"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/etMessage"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         android:layout_height="0dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#00FFFFFF"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/baseline_camera_alt_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+
+        app:iconSize="45dp"
+        app:iconTint="#121212"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etMessage"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="8dp"
+        android:layout_marginBottom="5dp"
+        android:fitsSystemWindows="true"
+        android:hint="Whats on your mind"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSent"
+        app:layout_constraintStart_toEndOf="@+id/btnImage" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="Send"
+        app:layout_constraintBaseline_toBaselineOf="@+id/etMessage"
+        app:layout_constraintEnd_toEndOf="@+id/rvMain" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
