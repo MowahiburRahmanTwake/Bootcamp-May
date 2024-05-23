@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "130293936515",
-    "project_id": "learningapp-d26cf",
-    "storage_bucket": "learningapp-d26cf.appspot.com"
+    "project_number": "466321660764",
+    "project_id": "bootcamp-may-9359d",
+    "storage_bucket": "bootcamp-may-9359d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:130293936515:android:51b52fc62fadbce8db86b6",
+        "mobilesdk_app_id": "1:466321660764:android:9d6b432b07b7d4c4987f99",
         "android_client_info": {
           "package_name": "com.example.bootcampmay"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDAFjW6c0cO0IwOW2_VazCEUXTXqAdUqiw"
+          "current_key": "AIzaSyD6yaFrTjRDPVqEXP0tVzF3bnfu6e-NCzs"
         }
       ],
       "services": {

@@ -57,11 +57,11 @@
         android:fitsSystemWindows="true"
         android:hint="Whats on your mind"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSend"
         app:layout_constraintStart_toEndOf="@+id/btnImage" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSent"
+        android:id="@+id/btnSend"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:text="Send"

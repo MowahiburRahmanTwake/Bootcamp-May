@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.bootcampmay.databinding.FragmentHomeBinding
+import com.example.bootcampmay.model.UserModel
 import com.example.bootcampmay.utils.fragmentAdd
+
 
 class HomeFragment: Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -22,11 +24,20 @@ class HomeFragment: Fragment() {
 
         binding.btnEnter.setOnClickListener {
 
-            val bundle = Bundle().apply {
-//                putParcelable()
-            }
+            val uId = binding.etUserId.text?.toString()
+            val uName = binding.etUserName.text?.toString()
 
-            fragmentAdd( activity, UserListFragment(),bundle)
+            val userModel = UserModel(
+                    uId?:"",
+                    uName?:"",
+                    "",
+                    "",
+                                     )
+
+            val bundle = Bundle().apply {
+                putParcelable("USER_MODEL", userModel)
+            }
+            fragmentAdd(activity,UserListFragment(),bundle)
         }
     }
 }

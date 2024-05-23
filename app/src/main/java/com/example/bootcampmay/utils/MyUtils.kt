@@ -18,5 +18,4 @@ fun fragmentAdd(activity: FragmentActivity?, fragment: Fragment, bundle: Bundle?
     }
 
 
-
 }
